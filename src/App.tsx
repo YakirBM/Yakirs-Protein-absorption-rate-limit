@@ -10,12 +10,14 @@ import DemographicsModule from './components/DemographicsModule';
 import TimingModule from './components/TimingModule';
 import QualityModule from './components/QualityModule';
 import SafetyModule from './components/SafetyModule';
+import ResearchModule from './components/ResearchModule';
 
 const MODULES = [
   { id: 'demographics', title: 'דמוגרפיה ונתונים' },
   { id: 'timing', title: 'תזמון וחלוקה' },
   { id: 'quality', title: 'איכות ומקורות' },
-  { id: 'safety', title: 'בטיחות ומיתוסים' }
+  { id: 'safety', title: 'בטיחות ומיתוסים' },
+  { id: 'research', title: 'ספריית מחקרים' }
 ];
 
 export default function App() {
@@ -62,6 +64,7 @@ export default function App() {
             {activeModule === 'timing' && <TimingModule />}
             {activeModule === 'quality' && <QualityModule />}
             {activeModule === 'safety' && <SafetyModule />}
+            {activeModule === 'research' && <ResearchModule />}
 
             {/* Navigation Buttons */}
             <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">

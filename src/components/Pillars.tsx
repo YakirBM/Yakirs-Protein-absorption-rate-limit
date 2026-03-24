@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Users, Clock, ShieldCheck, AlertTriangle } from 'lucide-react';
+import { Users, Clock, ShieldCheck, AlertTriangle, FileText } from 'lucide-react';
 
 interface PillarsProps {
   onSelectModule: (module: string) => void;
@@ -34,6 +34,13 @@ export default function Pillars({ onSelectModule }: PillarsProps) {
       description: 'האם עודף חלבון מסוכן לכליות? סקירת עמדות רשמיות של ארגוני בריאות והסבר על היפר-פילטרציה.',
       icon: AlertTriangle,
       color: 'from-red-500 to-orange-500'
+    },
+    {
+      id: 'research',
+      title: 'ספריית מחקרים',
+      description: 'קריאה והורדה של קבצי ה-PDF המקוריים והמחקרים המלאים עליהם מבוסס המידע באתר.',
+      icon: FileText,
+      color: 'from-cyan-500 to-blue-500'
     }
   ];
 
@@ -47,7 +54,7 @@ export default function Pillars({ onSelectModule }: PillarsProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pillars.map((pillar, index) => (
             <motion.div
               key={pillar.id}

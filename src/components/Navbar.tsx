@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Home, BookOpen, Activity, Clock, ShieldCheck, AlertTriangle } from 'lucide-react';
+import { Menu, X, Home, BookOpen, Activity, Clock, ShieldCheck, AlertTriangle, FileText } from 'lucide-react';
 
 interface NavbarProps {
   activeModule: string | null;
@@ -31,6 +31,7 @@ export default function Navbar({ activeModule, setActiveModule }: NavbarProps) {
     { id: 'timing', title: 'תזמון וחלוקה', icon: Clock, action: () => { setActiveModule('timing'); window.scrollTo({ top: 0, behavior: 'smooth' }); } },
     { id: 'quality', title: 'איכות ומקורות', icon: ShieldCheck, action: () => { setActiveModule('quality'); window.scrollTo({ top: 0, behavior: 'smooth' }); } },
     { id: 'safety', title: 'בטיחות ומיתוסים', icon: AlertTriangle, action: () => { setActiveModule('safety'); window.scrollTo({ top: 0, behavior: 'smooth' }); } },
+    { id: 'research', title: 'ספריית מחקרים', icon: FileText, action: () => { setActiveModule('research'); window.scrollTo({ top: 0, behavior: 'smooth' }); } },
   ];
 
   // Prevent scrolling when menu is open
