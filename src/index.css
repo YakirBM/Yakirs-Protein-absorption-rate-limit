@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Heebo", ui-sans-serif, system-ui, sans-serif;
+  --color-accent-blue: #00F0FF;
+  --color-accent-green: #39FF14;
+  --color-dark-bg: #050505;
+  --color-dark-card: #111111;
+  --color-dark-border: #222222;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: #ffffff;
+}
